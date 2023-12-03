@@ -3,7 +3,9 @@ this module is for K/O code and delays
 '''
 import random as rnd
 import time as t
+
 TIME_TO_SLEEP = 1
+
 class Fighter:
     '''
     this cls is Fighters
@@ -15,11 +17,13 @@ class Fighter:
         self.__name = name
         self.__health = health
         self.__damage_per_attack = damage_per_attack
+
     def get_name(self):
         '''
         getter from name
         '''
         return self.__name
+
     def get_health(self):
         '''
         getter from health and health check for < 0
@@ -27,17 +31,19 @@ class Fighter:
         if self.__health > 0:
             return self.__health
         return 0
-    def get_atack(self):
-        '''
-        getter from atack
-        '''
-        return self.__damage_per_attack
     def set_health(self, health_to_set):
         '''
         setters of health
         '''
         self.__health = health_to_set
         return self.__health
+
+    def get_atack(self):
+        '''
+        getter from atack
+        '''
+        return self.__damage_per_attack
+
     def get_characteristics(self):
         '''
             this fnc gives you Characteristics of fighter
@@ -49,11 +55,13 @@ class Fighter:
         line()
         t.sleep(TIME_TO_SLEEP)
         return self.get_name(), self.get_health(), self.get_atack()
+
     def fighter_entering_ring(self):
         '''
             this fnc means entering of fighter on ring
         '''
         print(f'\nMeet {self.__name} today on ring ')
+
 def line():
     '''
     this fnc is going line
@@ -63,6 +71,7 @@ def line():
         print('_', end = '')
         t.sleep(0.01)
         i += 1
+
 class Fight:
     '''
         This class is Fight of Fighters
@@ -70,11 +79,13 @@ class Fight:
     def __init__(self, fighter1, fighter2):
         self.__fighter1 = fighter1
         self.__fighter2 = fighter2
+
     def get_fighters(self):
         '''
         getter from instance
         '''
         return self.__fighter1, self.__fighter2
+
     def fighter_atack(self, fighter1, fighter2):
         '''
         Fnc that means atack of Fighter
@@ -96,6 +107,7 @@ class Fight:
         t.sleep(TIME_TO_SLEEP)
         line()
         t.sleep(TIME_TO_SLEEP)
+
     def countdown(self):
         '''
             this fnc means start of the round
@@ -112,6 +124,7 @@ class Fight:
             t.sleep(1)
         print('                             FIGHT')
         t.sleep(TIME_TO_SLEEP)
+
     def round(self):
         '''
             Round conduct
